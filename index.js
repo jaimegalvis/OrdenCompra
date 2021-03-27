@@ -1,5 +1,7 @@
 const http = require('http');
 
+const port = parseInt(process.env.PORT) || 4061
+
 const server = http.createServer((req,res)=>{
     console.log('ruta: ',req.url);
     switch(req.url){
@@ -21,6 +23,6 @@ const server = http.createServer((req,res)=>{
 
 
 
-}).listen(4061,()=>{
-    console.log('servidor operativo en el puerto 4061')
+}).listen(port,()=>{
+    console.log('servidor operativo en el puerto '+port)
 });
